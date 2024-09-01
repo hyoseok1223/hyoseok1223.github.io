@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Feature Embedded 3D Gaussians"
-date:   # 2024-08-16 #22:21:59 +00:00
+date:   2023-12-31 23:59:59 +00:00
 image: /images/bootstrapping.png
 categories: research
 # author: "Leo Keselman"

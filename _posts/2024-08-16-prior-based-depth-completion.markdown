@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Prior-based Zero-shot Depth Completion"
-date:   # 2024-08-16 #22:21:59 +00:00
+# date:   # 2024-08-16 #22:21:59 +00:00
 videp: /video/DC_indoor.mp4
 categories: research
 # author: "Leo Keselman"
