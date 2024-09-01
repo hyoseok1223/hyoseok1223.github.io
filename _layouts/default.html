@@ -69,18 +69,8 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <!-- <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td> -->
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              {% if post.video %}
-                <video controls style="width:auto; height:auto; max-width:100%;">
-                  <source src="/tn{{post.video}}" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              {% else %}
-                <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-              {% endif %}
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
