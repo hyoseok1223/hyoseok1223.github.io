@@ -42,7 +42,7 @@
               </p>
               <p style="text-align:center">
                 <a target="_blank" href="hyos99@postech.ac.kr"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/hyoseok1223">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://github.com/hyoseok1223">GitHub</a> <!--&nbsp;/&nbsp;-->
                 <!-- <a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp; -->
                 <!-- <a href="https://www.linkedin.com/in/lkeselman"> LinkedIn </a> -->
               </p>
@@ -69,8 +69,18 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+            <!-- <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td> -->
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              {% if post.video %}
+                <video controls style="width:auto; height:auto; max-width:100%;">
+                  <source src="/tn{{post.video}}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              {% else %}
+                <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              {% endif %}
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -112,7 +122,7 @@
         <br>
         <br>
         <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Intel Projects</h2>
@@ -178,8 +188,8 @@
         </table>
         <br>
         <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <br> -->
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Other Projects</h2>
@@ -188,7 +198,7 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"> -->
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
