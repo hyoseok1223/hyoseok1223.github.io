@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -41,18 +41,18 @@
                 My research interests include 3D Reconstruction, Computational Photography, and Generative Model, but not limited to.
               </p>
               <p style="text-align:center">
-                <a target="_blank" href="hyos99@postech.ac.kr"> Email</a> &nbsp;/&nbsp;
+                <a target="_blank" href="mailto:hyos99@postech.ac.kr"> Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/hyoseok1223">GitHub</a> <!--&nbsp;/&nbsp;-->
                 <!-- <a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp; -->
                 <!-- <a href="https://www.linkedin.com/in/lkeselman"> LinkedIn </a> -->
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/hyo1.jpg">
+              <img style="width:100%;max-width:400px;height:auto;" alt="profile photo" src="images/hyo1.jpg">
             </td>
           </tr>
         </table>
-
+  
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -68,14 +68,14 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:200px; max-height:300px; object-fit:cover;" />
+            <td style="padding:2.5%;width:30%;vertical-align:middle;min-width:200px">
+              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:300px;" />
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:2.5%;width:70%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
-
+  
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
