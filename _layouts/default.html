@@ -25,16 +25,17 @@
 </head>
 
 <body>
+  <!--  -->
   <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
+            <td style="padding:2.5%;width:50%;vertical-align:middle">
               <h1>
                 Lee Hyoseok
               </h1>
-              <p>I am a joint MS-Ph.D. student at the <a href="https://ami.postech.ac.kr/">Alogithmic Machine Intelligence Lab</a> in Artificial Intelligence at <a href="https://postech.ac.kr/eng/">POSTECH</a> , advised by <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
+              <p>I am a joint MS-Ph.D. student at the <a href="https://ami.postech.ac.kr/">Alogithmic Machine Intelligence Lab</a> in Artificial Intelligence at <a href="https://postech.ac.kr/eng/">POSTECH</a>, advised by <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
               </p>
               <p>
                 I work on research problems in computer graphics, vision, and machine learning.
@@ -43,12 +44,10 @@
               <p style="text-align:center">
                 <a target="_blank" href="mailto:hyos99@postech.ac.kr"> Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/hyoseok1223">GitHub</a> <!--&nbsp;/&nbsp;-->
-                <!-- <a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp; -->
-                <!-- <a href="https://www.linkedin.com/in/lkeselman"> LinkedIn </a> -->
               </p>
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:400px;height:auto;" alt="profile photo" src="images/hyo1.jpg">
+            <td style="padding:2.5%;width:50%;max-width:50%;vertical-align:middle;">
+              <img style="width:100%;max-width:500px;height:auto;" alt="profile photo" src="images/hyo1.jpg">
             </td>
           </tr>
         </table>
@@ -57,9 +56,6 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Publications</h2>
-              <!-- <p>
-                <!-- I'm interested in computer vision, machine learning, optimization, graphics and robotics. -->
-              <!-- </p> -->
             </td>
           </tr>
         </table>
@@ -68,10 +64,10 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <td style="padding:2.5%;width:30%;vertical-align:middle;min-width:200px">
-              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:300px;" />
+            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:300px">
+              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:500px;" />
             </td>
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
@@ -108,6 +104,7 @@
           {% endfor %}
           {% endfor %}
         </table>
+        <!--  -->
         <br>
         <br>
         <br>
