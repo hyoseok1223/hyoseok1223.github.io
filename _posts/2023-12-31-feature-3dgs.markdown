@@ -12,5 +12,5 @@ venue: "IPIU (Workshop on Image Processing and Image Understanding)"
 # website: https://leonidk.github.io/fmb-plus
 ---
 <!-- <p><strong style="color: red;">IPIU 2024</strong> -  -->
-<strong style="color: red;">Outstanding Poster Presentation Award</strong></p>
+<p><strong style="color: red;">Outstanding Poster Presentation Award</strong></p>  
 Constructing versatile 3D feature field by addressing feature rendering equation and bootstrapping multi-view features. 

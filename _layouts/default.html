@@ -73,7 +73,7 @@
               {{post.authors}}
   
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <em style="font-weight: bold;">{{post.venue}}</em>, <span style="font-weight: bold;">{{ post.date | date: "%Y" }}</span>
               <br>
               {% if post.arxiv %}
               <a href="{{post.arxiv}}">arXiv</a> /
@@ -91,7 +91,7 @@
               <a href="{{post.slides}}">Slides</a> /
               {% endif %}
               {% if post.website %}
-              <a href="{{post.website}}">Project page</a> /
+              <a href="{{post.website}}">Project page</a> 
               {% endif %}
               {% if post.youtube %}
               <a href="{{post.youtube}}">Youtube</a> /

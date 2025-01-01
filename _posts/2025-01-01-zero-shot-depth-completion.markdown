@@ -6,7 +6,7 @@ image: /images/indoor_alignment.gif
 categories: research
 # author: "Leo Keselman"
 # authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
-venue: "AAAI 2025"
+venue: "AAAI"
 # arxiv: https://arxiv.org/abs/2308.14737
 code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
 website: https://hyoseok1223.github.io/zero-shot-depth-completion/
