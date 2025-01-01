@@ -11,4 +11,4 @@ venue: "AAAI 2025"
 Code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
 Project page: https://hyoseok1223.github.io/zero-shot-depth-completion/
 ---
-Zero-shot depth completion: Align sparse depth measurements with affine-invariant depth prior at test time.
+Zero-shot depth completion: Align sparse depth measurements with affine-invariant depth diffusion prior at test time.
