@@ -8,7 +8,7 @@ categories: research
 # authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
 venue: "AAAI 2025"
 # arxiv: https://arxiv.org/abs/2308.14737
-Code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
-Project page: https://hyoseok1223.github.io/zero-shot-depth-completion/
+code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
+website: https://hyoseok1223.github.io/zero-shot-depth-completion/
 ---
 Zero-shot depth completion: Align sparse depth measurements with affine-invariant depth diffusion prior at test time.
