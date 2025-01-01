@@ -6,7 +6,7 @@ image: /images/bootstrapping.png
 categories: research
 # author: "Leo Keselman"
 # authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
-venue: "Ongoing"
+# venue: "Ongoing"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus
 # website: https://leonidk.github.io/fmb-plus
