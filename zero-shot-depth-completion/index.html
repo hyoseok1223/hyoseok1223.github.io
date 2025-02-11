@@ -276,14 +276,20 @@
           domain-generalizable depth completion without relying on
           extensive training datasets.
         </div>
+        <div class="item item-teaser">
+          <img src="./static/images/teaser.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto 10px;">
+        </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
+    <!-- 여백 추가 -->
+    <div class="mt-6"></div>
+
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video Presentation</h2>
+        <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/1-MisfQLKDA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -295,65 +301,105 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
 
-<section class="container is-max-desktop">
-  <div class="column is-four-fifths">
-    <div class="container">
+        <!-- <h2 class="title is-3">Problem Definition</h2> -->
 
-      <h2 class="title is-3">Key Approach</h2>
-      <div class="item item-concept">
-        <img src="./static/images/concept.png">
-      </div>
-      <div class="content has-text-justified">
-        We propose a zero-shot depth completion method that just aligns the affine-invariant depth prior with metric-scale sparse depth measurements.
-      </div>
-      <div class="item item-method">
-        <img src="./static/images/method_github.png">
-      </div>
-      <div class="content has-text-justified">
-        We formulate depth completion as an "inverse problem": estimating unknown dense depth from observed sparse measurements.
-        In this formulation, we can leverage the pre-trained monocular depth diffusion model as a depth prior, regularizing solution to be dense and well-structured depth map.
-      </div>
 
+        <h2 class="title is-3">Key Approach</h2>
+
+        <div class="mt-6"></div>
+
+        <!-- 첫 번째 설명 (너비 조절 & 중앙 정렬) -->
+        <div class="content has-text-justified" style="max-width: 100%; margin: 0 auto;">
+          We propose a zero-shot depth completion method that just aligns the affine-invariant depth prior with metric-scale sparse depth measurements.
+          How can we leverage depth prior for alignment?
+        </div>
+
+        <div class="mt-3"></div>
+
+        <!-- Concept Image (Bulma is-4by3 제거 & 여백 최소화) -->
+        <div class="item item-concept">
+          <img src="./static/images/concept.png" style="max-width: 80%; height: auto; display: block; margin: 0 auto 10px;" alt="Concept of our prior-based alignemnt approach">
+        </div>
+
+        <!-- 두 번째 설명 (너비 조절 & 중앙 정렬) -->
+        <div class="content has-text-justified" style="max-width: 100%; margin: 0 auto;">
+          We formulate depth completion as an <strong>"inverse problem"</strong>: estimating unknown dense depth from observed sparse measurements.
+          In this formulation, we can leverage the pre-trained monocular depth diffusion model as a depth prior, regularizing the solution to be dense and well-structured depth map.
+          We propose test-time alignment with a correction step enforcing measurements as hard constraints, ensuring desirable solutions.
+          This alignment process consists of two steps including optimization loop and resampling.
+          Our prior-based approach enables our method to generalize well across various domain datasets.
+        </div>
+
+        <!-- Method Image (Bulma is-4by3 제거 & 여백 최소화) -->
+        <div class="item item-method">
+          <img src="./static/images/method_github.png" 
+               style="max-width: 100%; height: auto; display: block; margin: 10px auto 5px;" 
+               alt="Overall test-time alignment method">
+          <p style="text-align: center; font-size: 17px;">
+            Overall test-time alignment method
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
 
       <!-- Title Text -->
-      <h2 class="title has-text-centered">Domain Generalization Results</h2>
+        <h2 class="title has-text-centered">Domain Generalization Results</h2>
 
-      <!-- Domain Generalization Table-->
-      <div class="table-container">
-        <img src="./static/images/generalization_table.png" alt="Quantitative Reults">
-      </div>
+        <div class="mt-3"></div>
+        <div class="content has-text-justified">
+          Below table summarizes the domain generalization performance of our method and previous test-time adaptation methods on indoor (NYU, SceneNet) and outdoor (Waymo, nuScenes) datasets.
+          Across various domain datasets, our prior-based approach consistently achieves the best or second-best performance.
+        </div>
 
-      <!-- Image Carousel -->
-      <div id="results-carousel" class="carousel results-carousel">
+        <!-- Qualitative Results -->
+        <h3 class="title has-text-centered is-size-4">Quantitative Reults</h3>
+        <!-- Domain Generalization Table-->
+        <div class="table-container">
+          <img src="./static/images/generalization_table.png" alt="Quantitative Reults">
+        </div>
+
+        <h3 class="title has-text-centered is-size-4">Qualitative Reults</h3>
+<!-- 
+        <p style="text-align: center; font-size: 17px;">
+          NYUv2
+        </p> -->
         <div class="item item-img1">
           <img src="./static/images/generalization_nyu_fig.png" alt="Qaulitative Reults on NYUv2">
         </div>
+        
+        <div class="mt-6"></div>
+
+        <!-- <p style="text-align: center; font-size: 17px;">
+          nuScenes
+        </p> -->
         <div class="item item-img2">
           <img src="./static/images/generalization_nuscene_fig.png" alt="Qaulitative Reults on nuScenes">
         </div>
-        <!-- </div>
-        <div class="item item-img3">
-          <img src="./static/images/img3.png" alt="Image 3">
-        </div>
-        <div class="item item-img4">
-          <img src="./static/images/img4.png" alt="Image 4">
-        </div> -->
+          <!-- </div>
+          <div class="item item-img3">
+            <img src="./static/images/img3.png" alt="Image 3">
+          </div>
+          <div class="item item-img4">
+            <img src="./static/images/img4.png" alt="Image 4">
+          </div> -->
       </div>
-
     </div>
   </div>
 </section>
+
 
 
 
