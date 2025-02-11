@@ -7,7 +7,7 @@ categories: research
 # author: "Leo Keselman"
 # authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
 venue: "AAAI"
-# arxiv: https://arxiv.org/abs/2308.14737
+arxiv: https://arxiv.org/abs/2502.06338
 code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
 website: https://hyoseok1223.github.io/zero-shot-depth-completion/
 ---

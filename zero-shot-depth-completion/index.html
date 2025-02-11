@@ -112,7 +112,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Grad. School of AI, POSTECH</span>
             <span class="author-block"><sup>2</sup>Dept. of Electrical Engineering, POSTECH</span>
-            <span class="author-block"><sup>1</sup>Institute for Convergence Research and Education in Advanced Technology, Yonsei University</span>
+            <span class="author-block"><sup>3</sup>Institute for Convergence Research and Education in Advanced Technology, Yonsei University</span>
             <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
@@ -120,7 +120,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://hyoseok1223.github.io/"
+                <a href="https://arxiv.org/abs/2502.06338"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -157,16 +157,16 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=1-MisfQLKDA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="far fa-youtube"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Videp</span>
                   </a>
-            </div> -->
+            </div>
 
           </div>
         </div>
@@ -182,11 +182,9 @@
         <source src="./static/videos/DC_indoor.mp4"
                 type="video/mp4">
       </video>
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2> -->
+      <h2 class="subtitle has-text-centered">
+        TL;DR, Aligning affine-invariant depth prior with sparse metric measurement is a proven strategy for zero-shot generalization.
+      </h2>
     </div>
   </div>
 </section>
@@ -283,18 +281,84 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Video Presentation</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/watch?v=1-MisfQLKDA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--/ Paper video. -->
   </div>
 </section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <h2 class="title is-3">Key Approach</h2>
+      <div class="item item-concept">
+        <img src="./static/images/concept.png">
+      </div>
+      <div class="content has-text-justified">
+        We propose a zero-shot depth completion method that just aligns the affine-invariant depth prior with metric-scale sparse depth measurements.
+      </div>
+      <div class="item item-method">
+        <img src="./static/images/method_github.png">
+      </div>
+      <div class="content has-text-justified">
+        We formulate depth completion as an "inverse problem": estimating unknown dense depth from observed sparse measurements.
+        In this formulation, we can leverage the pre-trained monocular depth diffusion model as a depth prior, regularizing solution to be dense and well-structured depth map.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <!-- Title Text -->
+      <h2 class="title has-text-centered">Domain Generalization Results</h2>
+
+      <!-- Domain Generalization Table-->
+      <div class="table-container">
+        <img src="./static/images/generalization_table.png" alt="Quantitative Reults">
+      </div>
+
+      <!-- Image Carousel -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-img1">
+          <img src="./static/images/generalization_nyu_fig.png" alt="Qaulitative Reults on NYUv2">
+        </div>
+        <div class="item item-img2">
+          <img src="./static/images/generalization_nuscene_fig.png" alt="Qaulitative Reults on nuScenes">
+        <!-- </div>
+        <div class="item item-img3">
+          <img src="./static/images/img3.png" alt="Image 3">
+        </div>
+        <div class="item item-img4">
+          <img src="./static/images/img4.png" alt="Image 4">
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
 <!-- 
 <section class="section">
@@ -374,27 +438,27 @@
 </section> -->
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{hyoseok2024zeroshot,
+  author    = {Lee Hyoseok and Kyeong Seon Kim and Kwon Byung-Ki and Tae-Hyun Oh},
+  title     = {Zero-shot Depth Completion via Test-time Alignment with Affine-invariant Depth Prior},
+  journal   = {The 39th Annual AAAI Conference on Artificial Intelligence},
+  year      = {2025},
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/abs/2502.06338" class="external-link" disabled>
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://hyoseok1223.github.io/" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
