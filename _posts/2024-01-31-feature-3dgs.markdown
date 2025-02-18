@@ -5,7 +5,7 @@ title:  "Bootstrapping Multi-View Features via Bridging the Gap between Linearit
 image: /images/bootstrapping.png
 categories: research
 # author: "Leo Keselman"
-# authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
+authors: "<strong>Hyoseok Lee</strong>, Kim Jun-Seong, Kim Ji-Yeon, Tae-Hyun Oh"
 venue: "IPIU (Workshop on Image Processing and Image Understanding)"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus
