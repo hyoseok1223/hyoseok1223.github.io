@@ -5,7 +5,7 @@ title:  "Zero-shot Depth Completion via Test-time Alignment with Affine-invarian
 image: /images/indoor_alignment.gif
 categories: research
 # author: "Leo Keselman"
-authors: "<strong><a href="https://hyoseok1223.github.io" target="_blank">Hyoseok Lee</a></strong>, Kyeong Seon Kim, Byung-Ki Kwon, Tae-Hyun Oh"
+authors: "<strong>Hyoseok Lee</strong>, Kyeong Seon Kim, Byung-Ki Kwon, Tae-Hyun Oh"
 venue: "AAAI"
 arxiv: https://arxiv.org/abs/2502.06338
 code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
