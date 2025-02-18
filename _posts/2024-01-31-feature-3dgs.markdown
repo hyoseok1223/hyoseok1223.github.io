@@ -5,7 +5,15 @@ title:  "Bootstrapping Multi-View Features via Bridging the Gap between Linearit
 image: /images/bootstrapping.png
 categories: research
 # author: "Leo Keselman"
-authors: "<strong>Hyoseok Lee</strong>, Kim Jun-Seong, Kim Ji-Yeon, Tae-Hyun Oh"
+authors:
+  - name: "<strong>Hyoseok Lee</strong>"
+    link: "https://hyoseok1223.github.io"
+  - name: "Kim Jun-Seong"
+    link: "https://kim-junseong.github.io/"
+  - name: "Kim Ji-Yeon"
+    link: "https://jiyeon-k1m.github.io/"
+  - name: "Tae-Hyun Oh"
+    link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "IPIU (Workshop on Image Processing and Image Understanding)"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus

@@ -99,6 +99,14 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.post-authors p:first-child {
+  margin-bottom: 10px; /* 저자 리스트 아래쪽 여백 추가 */
+}
+
+// .post-authors {
+//   margin-bottom: 10px; /* 전체 블록 아래쪽 여백 추가 */
+// }
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";

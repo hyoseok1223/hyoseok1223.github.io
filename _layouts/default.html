@@ -69,10 +69,14 @@
             </td>
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3 style="font-size: 1.2em;">{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-  
-              <br>
+              <div class="post-authors">
+                <p>
+                  {% for author in page.authors %}
+                    <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>
+                    {% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                </p>
+              </div>
               <em style="font-weight: 500;">{{post.venue}}</em>, <span style="font-weight: 500;">{{ post.date | date: "%Y" }}</span>
               <br>
               {% if post.arxiv %}
