@@ -8,8 +8,8 @@ categories: research
 authors:
   - name: "<strong>Hyoseok Lee</strong>"
     link: "https://hyoseok1223.github.io"
-  # - name: "Kim Jun-Seong"
-  #   link: "https://kim-junseong.github.io/"
+  - name: "Kim Jun-Seong"
+    link: "https://kim-junseong.github.io/"
   - name: "Kim Ji-Yeon"
     link: "https://jiyeon-k1m.github.io/"
   - name: "Tae-Hyun Oh"
