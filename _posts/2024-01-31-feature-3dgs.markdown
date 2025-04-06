@@ -6,7 +6,7 @@ image: /images/bootstrapping.png
 categories: research
 # author: "Leo Keselman"
 authors:
-  - name: "<strong>Hyoseok Lee</strong>"
+  - name: "<strong>Lee Hyoseok</strong>"
     link: "https://hyoseok1223.github.io"
   - name: "Kim Jun-Seong"
     link: "https://kim-junseong.github.io/"

@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Joint Generative Model"
+# date:   # 2024-08-16 #22:21:59 +00:00s
+image: /images/comming_soon.png
+categories: research
+# author: "Leo Keselman"
+authors:
+  # - name: "GeonU Kim"
+  #   link: "https://kim-geonu.github.io/"
+  # - name: "Kim Youwang"
+  #   link: "https://kim-youwang.github.io/"
+  # - name: "<strong>Lee Hyoseok</strong>"
+  #   link: "https://hyoseok1223.github.io"
+  # - name: "Tae-Hyun Oh"
+  #   link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
+venue: "Under review"
+# arxiv: https://arxiv.org/abs/2503.09635
+# website: https://kim-geonu.github.io/FPGS/
+---
