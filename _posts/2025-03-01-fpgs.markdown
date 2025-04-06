@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Zero-shot Depth Completion via Test-time Alignment with Affine-invariant Depth Priors"
+title:  "FPGS: Feed-Forward Semantic-aware Photorealistic Style Transfer of Large-Scale Gaussian Splatting"
 # date:   # 2024-08-16 #22:21:59 +00:00s
 image: /images/fpgs.gif
 categories: research
