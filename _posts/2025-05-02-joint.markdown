@@ -21,3 +21,4 @@ venue: "Under review"
 arxiv: https://arxiv.org/abs/2505.00482v1
 website: https://byungki-k.github.io/JointDiT/
 ---
+JointDiT, a diffusion transformer that models the joint distribution of RGB and depth within a single unified model.
