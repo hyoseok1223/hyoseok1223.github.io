@@ -24,6 +24,27 @@
 
 </head>
 
+<!-- Hover Image -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swapImages = document.querySelectorAll(".hover-swap-image");
+
+    swapImages.forEach(img => {
+      const original = img.getAttribute("data-original");
+      const hover = img.getAttribute("data-hover");
+
+      img.addEventListener("mouseenter", () => {
+        img.src = hover;
+      });
+
+      img.addEventListener("mouseleave", () => {
+        img.src = original;
+      });
+    });
+  });
+</script>
+
+
 <body>
   <!--  -->
   <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -70,8 +91,21 @@
           {% if cat == 'research' %}
           <tr>
             <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:300px">
-              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:500px;" />
+              {% if post.hover_image %}
+                <img src="{{ post.image }}"
+                     alt="project image"
+                     class="hover-swap-image"
+                     data-hover="{{ post.hover_image }}"
+                     data-original="{{ post.image }}"
+                     style="width:100%; height:auto; max-width:500px; object-fit:cover;" />
+              {% else %}
+                <img src="{{ post.image }}"
+                     alt="project image"
+                     style="width:100%; height:auto; max-width:500px;" />
+              {% endif %}
             </td>
+
+            
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3 style="font-size: 1.2em;">{{post.title}}</h3>
               <div class="post-authors">

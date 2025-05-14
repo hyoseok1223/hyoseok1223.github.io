@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "JointDiT: Enhancing RGB-Depth Joint Modeling with Diffusion Transformers"
+# date:   # 2024-08-16 #22:21:59 +00:00s
+image: /images/supple_video_ver5.gif
+hover_image: /images/supple_video_ver5_hover.gif
+categories: research
+# author: "Leo Keselman"
+authors:
+  - name: "Byung-Ki Kwon"
+    link: "https://sites.google.com/view/kwon-byung--ki/%ED%99%88"
+  - name: "Qi Dai"
+    link: "https://daiqi1989.github.io/"
+  - name: "<strong>Lee Hyoseok</strong>"
+    link: "https://hyoseok1223.github.io"
+  - name: "Chong Luo"
+    link: "https://www.microsoft.com/en-us/research/people/cluo/"
+  - name: "Tae-Hyun Oh"
+    link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
+venue: "Under review"
+arxiv: https://arxiv.org/abs/2505.00482v1
+website: https://byungki-k.github.io/JointDiT/
+---

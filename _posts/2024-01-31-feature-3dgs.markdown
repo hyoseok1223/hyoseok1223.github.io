@@ -3,6 +3,7 @@ layout: post
 title:  "Bootstrapping Multi-View Features via Bridging the Gap between Linearity of Rendering and Non-linearity of 2D Feature Space"
 # date:   2023-12-31 23:59:59 +00:00
 image: /images/bootstrapping.png
+hover_image: /images/feat3dgs.gif
 categories: research
 # author: "Leo Keselman"
 authors:
