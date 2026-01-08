@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Measurement-Consistent Langevin Corrector: A Remedy for Latent Diffusion Inverse Solvers"
+# date:   # 2024-08-16 #22:21:59 +00:00s
+image: /images/mclc.png
+# hover_image: /images/supple_video_ver5_hover.gif
+categories: research
+# author: "Leo Keselman"
+authors:
+  - name: "<strong>Lee Hyoseok</strong>"
+    link: "https://hyoseok1223.github.io"
+  - name: "Sohwi Lim"
+    # link: "https://sites.google.com/view/kwon-byung--ki/%ED%99%88"
+  - name: "Eunju Cha"
+    link: "https://sites.google.com/sookmyung.ac.kr/vipl/people/professor"
+  - name: "Tae-Hyun Oh"
+    link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
+venue: "arXiv"
+# arxiv: https://arxiv.org/abs/2505.00482v1
+# website: https://byungki-k.github.io/JointDiT/
+---
+<p>
+  <strong style="
+    color: #c00000;
+    background: linear-gradient(transparent 60%, #fff3a0 60%);
+    padding: 0 4px;
+  ">
+    Best Excellence Prize, Electronics Times ICT Paper Awards, 2025
+  </strong>
+</p>
+MCLC, a plug-and-play module that stabilizes and improves latent diffusion inverse solvers.

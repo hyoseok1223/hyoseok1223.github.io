@@ -13,7 +13,7 @@ authors:
     link: "https://hyoseok1223.github.io"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "Workshop on CVinW: Computer Vision in the Wild, CVPR"
+venue: "Workshop on Computer Vision in the Wild, CVPR"
 # arxiv: https://arxiv.org/abs/2505.00482v1
 # website: https://byungki-k.github.io/JointDiT/
 ---

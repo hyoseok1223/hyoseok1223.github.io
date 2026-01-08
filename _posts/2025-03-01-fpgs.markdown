@@ -18,5 +18,13 @@ venue: "Under review"
 arxiv: https://arxiv.org/abs/2503.09635
 website: https://kim-geonu.github.io/FPGS/
 ---
-<p><strong style="color: red;">Excellence Prize, Electronics Times ICT Paper Awards, 2024</strong></p>  
+<p>
+  <strong style="
+    color: #c00000;
+    background: linear-gradient(transparent 60%, #fff3a0 60%);
+    padding: 0 4px;
+  ">
+    Excellence Prize, Electronics Times ICT Paper Awards, 2024
+  </strong>
+</p>
 FPGS performs feed-forward semantic-aware photorealistic style transfer of Gaussian Splatting.
