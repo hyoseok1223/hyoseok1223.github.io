@@ -19,7 +19,6 @@ venue: "Workshop on Computer Vision for Fashion, Art, and Design, ICCV"
 # arxiv: https://arxiv.org/abs/2505.00482v1
 # website: https://byungki-k.github.io/JointDiT/
 ---
-Dress-Up, a feed-forward, unconditional generative model for creating photorealistic, animatable, clothed 3D human avatars
 <p>
   <strong style="
     color: #c00000;
@@ -29,3 +28,4 @@ Dress-Up, a feed-forward, unconditional generative model for creating photoreali
     Oral Presentation
   </strong>
 </p>
+Dress-Up, a feed-forward, unconditional generative model for creating photorealistic, animatable, clothed 3D human avatars
