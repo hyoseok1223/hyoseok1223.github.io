@@ -16,7 +16,7 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "arXiv"
-# arxiv: https://arxiv.org/abs/2505.00482v1
+arxiv: https://arxiv.org/abs/2601.04791
 # website: https://byungki-k.github.io/JointDiT/
 ---
 <p>
