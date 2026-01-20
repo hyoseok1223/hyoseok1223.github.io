@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "ELITE: Efficient Gaussian Head Avatar from a Monocular Video via Learned Initialization and Test-time Generative Adaptation"
+# date:   # 2024-08-16 #22:21:59 +00:00s
+image: /images/elite.png
+# hover_image: /images/supple_video_ver5_hover.gif
+categories: research
+# author: "Leo Keselman"
+authors:
+  - name: "Kim Youwang"
+    link: "https://kim-youwang.github.io/"
+  - name: "<strong>Lee Hyoseok</strong>"
+    link: "https://hyoseok1223.github.io"
+  - name: "Park Subin"
+    link: "https://soobinnpark.github.io/"
+  - name: "Gerard Pons-Moll"
+    link: "https://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html"
+  - name: "Tae-Hyun Oh"
+    link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
+venue: "arXiv"
+arxiv: https://arxiv.org/abs/2601.10200
+website: https://kim-youwang.github.io/elite
+---
+ELITE synthesizes an animatable photorealistic Gaussian head avatar from a casual monocular video by synergistically exploiting 3D data priors and 2D generative priors.
