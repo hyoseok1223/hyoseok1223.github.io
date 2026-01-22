@@ -14,7 +14,7 @@ authors:
     link: "https://hyoseok1223.github.io"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "Under review"
+venue: "IJCV"
 arxiv: https://arxiv.org/abs/2503.09635
 website: https://kim-geonu.github.io/FPGS/
 ---
