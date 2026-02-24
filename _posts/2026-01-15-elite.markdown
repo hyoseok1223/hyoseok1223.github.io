@@ -17,7 +17,7 @@ authors:
     link: "https://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "arXiv"
+venue: "CVPR"
 arxiv: https://arxiv.org/abs/2601.10200
 website: https://kim-youwang.github.io/elite
 ---
