@@ -1,0 +1,24 @@
+- date: "2026-02"
+  text: "Two papers accepted to <b>CVPR 2026</b>"
+  # link: "https://arxiv.org/abs/xxxx.xxxxx"   # optional
+
+- date: "2026-01"
+  text: "One paper accepted to <b>IJCV</b>"
+
+- date: "2026-01"
+  text: "MCLC on <b>arXiv</b>"
+  link: "https://arxiv.org/abs/2601.04791"   # optional
+
+- date: "2025-12"
+  text: "MCLC received Best Excellence Prize ($5,000 prize), <b>Electronics Times ICT Paper Awards 2025</b>"
+  link: "https://www.etnews.com/20251216000203"
+
+- date: "2025-11"
+  text: "Welected as Winner ($4,000 prize), <b>Qualcomm Innvoation Fellowship Korea</b>, 2025"
+  link: "https://www.qualcomm.com/research/university-relations/innovation-fellowship/2025-south-korea"
+
+- date: "2025-06"
+  text: "One paper accepted to <b>ICCV 2025</b>"
+
+- date: "2024-12"
+  text: "One paper accepted to <b>AAAI 2025</b>"

@@ -81,6 +81,56 @@
           </tr>
         </table>  
   
+        <!-- News -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>News</h2>
+
+              <ul id="news-list" style="margin: 0.2em 0 0 1.2em; padding: 0; line-height: 1.6;">
+                {% assign news_sorted = site.data.news | sort: "date" | reverse %}
+                {% for item in news_sorted %}
+                  <li class="news-item" {% if forloop.index > 5 %}style="display:none;"{% endif %}>
+                    <span style="font-weight: 600;">{{ item.date }}</span>
+                    &nbsp;—&nbsp;
+                    {% if item.link and item.link != "" %}
+                      <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.text }}</a>
+                    {% else %}
+                      {{ item.text }}
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+
+              {% if news_sorted.size > 5 %}
+                <div style="margin-top: 0.6em;">
+                  <a href="javascript:void(0);" id="news-toggle" style="font-weight:600;">Show more</a>
+                </div>
+              {% endif %}
+
+            </td>
+          </tr>
+        </table>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("news-toggle");
+            if (!toggle) return;
+
+            const items = Array.from(document.querySelectorAll(".news-item"));
+            let expanded = false;
+
+            toggle.addEventListener("click", () => {
+              expanded = !expanded;
+              items.forEach((el, idx) => {
+                if (idx >= 5) el.style.display = expanded ? "list-item" : "none";
+              });
+              toggle.textContent = expanded ? "Show less" : "Show more";
+            });
+          });
+        </script>
+
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -285,6 +335,41 @@
           {% endfor %}
           {% endfor %}
         </table> -->
+
+        <!-- Academic Service -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Awards & Honors</h2>
+
+              <ul style="margin: 0.3em 0 0 1.2em; padding: 0; line-height: 1.6;">
+                <li>Best Excellence Prize ($5,000 prize), Electronics Times ICT Paper Awards, 2025</li>
+                <li>Winner ($4,000 prize), Qualcomm Innovation Fellowship Korea (QIFK), 2022</li>
+                <li>Excellence Prize, Electronics Times ICT Paper Awards, 2024</li>
+                <li>Outstanding Poster Presentation Award, IPIU 2024</li>
+                <!-- <li>Reviewer, ICCV 2025</li>
+                <li>Reviewer, ECCV 2024</li> -->
+              </ul>
+
+            </td>
+          </tr>
+        </table>
+
+        <!-- Academic Service -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Academic Services</h2>
+
+              <ul style="margin: 0.3em 0 0 1.2em; padding: 0; line-height: 1.6;">
+                <li>TPAMI 2026</li>
+                <!-- <li>Reviewer, ICCV 2025</li>
+                <li>Reviewer, ECCV 2024</li> -->
+              </ul>
+
+            </td>
+          </tr>
+        </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
