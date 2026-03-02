@@ -15,7 +15,7 @@ authors:
     link: "https://jiyeon-k1m.github.io/"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "IPIU (Workshop on Image Processing and Image Understanding)"
+venue: "IPIU"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus
 # website: https://leonidk.github.io/fmb-plus
