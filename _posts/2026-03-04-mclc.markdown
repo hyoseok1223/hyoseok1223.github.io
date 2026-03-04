@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Measurement-Consistent Langevin Corrector: A Remedy for Latent Diffusion Inverse Solvers"
+title:  "Measurement-Consistent Langevin Corrector for Stabilizing Latent Diffusion Inverse Problem Solvers"
 # date:   # 2024-08-16 #22:21:59 +00:00s
 image: /images/mclc.png
 # hover_image: /images/supple_video_ver5_hover.gif
