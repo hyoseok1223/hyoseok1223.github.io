@@ -16,8 +16,8 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "CVPR"
-# arxiv: https://arxiv.org/abs/2505.00482v1
-# website: https://byungki-k.github.io/JointDiT/
-paper: "pdfs/CVPR2026__Conditioned_Image_Retrieval.pdf"
+arxiv: https://arxiv.org/abs/2604.11539
+website: https://sohwi-lim.github.io/CLAY/
+# paper: "pdfs/CVPR2026__Conditioned_Image_Retrieval.pdf"
 ---
 CLAY, an adaptive similarity computation method that reframes the embedding space of pretrained Vision-Language Models (VLMs) as a text-conditional similarity space without additional training.

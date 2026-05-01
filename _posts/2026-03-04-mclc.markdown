@@ -15,7 +15,7 @@ authors:
     link: "https://sites.google.com/sookmyung.ac.kr/vipl/people/professor"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "arXiv"
+venue: "ICML"
 arxiv: https://arxiv.org/abs/2601.04791
 # website: https://byungki-k.github.io/JointDiT/
 ---
