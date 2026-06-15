@@ -2,7 +2,7 @@
 layout: post
 title:  "Dress-up: Generating Animatable Clothed 3D Humans via Latent Modeling of 3D Gaussian Texture Maps"
 # date:   # 2024-08-16 #22:21:59 +00:00s
-image: /images/dressup.png
+image: /images/dressup_thumbnail.png
 # hover_image: /images/supple_video_ver5_hover.gif
 categories: research
 # author: "Leo Keselman"
@@ -15,11 +15,12 @@ authors:
     link: "https://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
-venue: "Workshop on Computer Vision for Fashion, Art, and Design, ICCV"
+note: "Presented (<strong style='color:#8184F8;'>Oral</strong>) in Workshop on Computer Vision for Fashion, Art, and Design with ICCV 2025"
+venue_short: "ICCV Workshop"
 # arxiv: https://arxiv.org/abs/2505.00482v1
 # website: https://byungki-k.github.io/JointDiT/
 ---
-<p>
+<!-- <p>
   <strong style="
     color: #c00000;
     background: linear-gradient(transparent 60%, #fff3a0 60%);
@@ -27,5 +28,5 @@ venue: "Workshop on Computer Vision for Fashion, Art, and Design, ICCV"
   ">
     Oral Presentation
   </strong>
-</p>
+</p> -->
 Dress-Up, a feed-forward, unconditional generative model for creating photorealistic, animatable, clothed 3D human avatars

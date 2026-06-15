@@ -16,18 +16,9 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "IPIU"
+award: "Outstanding Poster Presentation Award"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus
 # website: https://leonidk.github.io/fmb-plus
 ---
-<!-- <p><strong style="color: red;">IPIU 2024</strong> -  -->
-<p>
-  <strong style="
-    color: #c00000;
-    background: linear-gradient(transparent 60%, #fff3a0 60%);
-    padding: 0 4px;
-  ">
-    Outstanding Poster Presentation Award
-  </strong>
-</p>
 Constructing versatile 3D feature field by addressing feature rendering equation and bootstrapping multi-view features. 

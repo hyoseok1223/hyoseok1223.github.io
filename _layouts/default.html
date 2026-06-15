@@ -51,8 +51,8 @@
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
+          <tr style="padding:0px" class="bio-row">
+            <td style="padding:2.5%;width:70%;vertical-align:middle;color:#111;" class="bio-text">
               <h1>
                 Lee Hyoseok
               </h1>
@@ -75,7 +75,7 @@
                 <!-- &nbsp;/&nbsp; -->
               </p>
             </td>
-            <td style="padding:2.5%;width:30%;max-width:30%;vertical-align:middle; text-align:center;">
+            <td style="padding:2.5%;width:30%;max-width:30%;vertical-align:middle; text-align:center;" class="bio-photo">
               <img style="width:auto;max-width:100%;height:auto;" alt="profile photo" src="images/hyo1.jpg">
             </td>
           </tr>
@@ -87,23 +87,24 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
 
-              <ul id="news-list" style="margin: 0.2em 0 0 1.2em; padding: 0; line-height: 1.6;">
+              <div id="news-list" style="margin-top: 0.8em;">
                 {% assign news_sorted = site.data.news | sort: "date" | reverse %}
                 {% for item in news_sorted %}
-                  <li class="news-item" {% if forloop.index > 5 %}style="display:none;"{% endif %}>
-                    <span style="font-weight: 600;">{{ item.date }}</span>
-                    &nbsp;—&nbsp;
-                    {% if item.link and item.link != "" %}
-                      <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.text }}</a>
-                    {% else %}
-                      {{ item.text }}
-                    {% endif %}
-                  </li>
+                  <div class="news-item" {% if forloop.index > 5 %}style="display:none;"{% endif %}>
+                    <span class="news-date">{{ item.date }}</span>
+                    <span class="news-text">
+                      {% if item.link and item.link != "" %}
+                        <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.text }}</a>
+                      {% else %}
+                        {{ item.text }}
+                      {% endif %}
+                    </span>
+                  </div>
                 {% endfor %}
-              </ul>
+              </div>
 
               {% if news_sorted.size > 5 %}
-                <div style="margin-top: 0.6em;">
+                <div style="margin-top: 0.8em;">
                   <a href="javascript:void(0);" id="news-toggle" style="font-weight:600;">Show more</a>
                 </div>
               {% endif %}
@@ -123,13 +124,15 @@
             toggle.addEventListener("click", () => {
               expanded = !expanded;
               items.forEach((el, idx) => {
-                if (idx >= 5) el.style.display = expanded ? "list-item" : "none";
+                if (idx >= 5) el.style.display = expanded ? "flex" : "none";
               });
               toggle.textContent = expanded ? "Show less" : "Show more";
             });
           });
         </script>
 
+
+        <hr class="section-divider">
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -142,24 +145,30 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:300px">
-              {% if post.hover_image %}
-                <img src="{{ post.image }}"
-                     alt="project image"
-                     class="hover-swap-image"
-                     data-hover="{{ post.hover_image }}"
-                     data-original="{{ post.image }}"
-                     style="width:100%; height:auto; max-width:500px; object-fit:cover;" />
-              {% else %}
-                <img src="{{ post.image }}"
-                     alt="project image"
-                     style="width:100%; height:auto; max-width:500px;" />
-              {% endif %}
+          <tr class="pub-row">
+            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:300px" class="pub-img">
+              <div class="pub-thumb-wrap">
+                {% if post.hover_image %}
+                  <img src="{{ post.image }}"
+                       alt="project image"
+                       class="hover-swap-image"
+                       data-hover="{{ post.hover_image }}"
+                       data-original="{{ post.image }}"
+                       style="width:100%; height:auto; max-width:500px; object-fit:cover;" />
+                {% else %}
+                  <img src="{{ post.image }}"
+                       alt="project image"
+                       style="width:100%; height:auto; max-width:500px;" />
+                {% endif %}
+                {% assign badge_text = post.venue_short | default: post.venue %}
+                {% if badge_text %}
+                  <span class="venue-badge">{{ badge_text }}{% unless post.hide_venue_year %} {{ post.date | date: "%Y" }}{% endunless %}</span>
+                {% endif %}
+              </div>
             </td>
 
             
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
+            <td style="padding:2.5%;width:60%;vertical-align:middle" class="pub-text">
               <h3 style="font-size: 1.2em;">{{post.title}}</h3>
               <div class="post-authors">
                 <p>
@@ -169,33 +178,38 @@
                   {% endfor %}
                 </p>
               </div>
-              <em style="font-weight: 700;">{{post.venue}}</em>, <span style="font-weight: 700;">{{ post.date | date: "%Y" }}</span>
-              <br>
+              <div class="pub-links">
               {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arXiv</a> /
+                <a href="{{post.arxiv}}" class="pub-btn" target="_blank">arXiv</a>
               {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">Paper</a> /
+                <a href="{{post.paper}}" class="pub-btn" target="_blank">Paper</a>
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">Video</a> /
+                <a href="{{post.video}}" class="pub-btn" target="_blank">Video</a>
               {% endif %}
               {% if post.code %}
-              <a href="{{post.code}}">Code</a> /
+                <a href="{{post.code}}" class="pub-btn" target="_blank">Code</a>
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">Poster</a> /
+                <a href="{{post.poster}}" class="pub-btn" target="_blank">Poster</a>
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">Slides</a> /
+                <a href="{{post.slides}}" class="pub-btn" target="_blank">Slides</a>
               {% endif %}
               {% if post.website %}
-              <a href="{{post.website}}">Project page</a> 
+                <a href="{{post.website}}" class="pub-btn" target="_blank">Website</a>
               {% endif %}
               {% if post.youtube %}
-              <a href="{{post.youtube}}">Youtube</a> /
+                <a href="{{post.youtube}}" class="pub-btn" target="_blank">YouTube</a>
               {% endif %}
-              <p></p>
+              </div>
+              {% if post.award %}
+                <p class="pub-award">{{ post.award }}</p>
+              {% endif %}
+              {% if post.note %}
+                <p class="pub-note">{{ post.note }}</p>
+              {% endif %}
               {{ post.excerpt }}
             </td>
           </tr>
@@ -350,8 +364,6 @@
                 <li>Winner ($4,000 prize), Qualcomm Innovation Fellowship Korea (QIFK), 2025</li>
                 <li>Excellence Prize, Electronics Times ICT Paper Awards, 2024</li>
                 <li>Outstanding Poster Presentation Award, IPIU 2024</li>
-                <!-- <li>Reviewer, ICCV 2025</li>
-                <li>Reviewer, ECCV 2024</li> -->
               </ul>
 
             </td>
@@ -366,8 +378,6 @@
 
               <ul style="margin: 0.3em 0 0 1.2em; padding: 0; line-height: 1.6;">
                 <li>Journal Reviewer: TPAMI 2026</li>
-                <!-- <li>Reviewer, ICCV 2025</li>
-                <li>Reviewer, ECCV 2024</li> -->
               </ul>
 
             </td>

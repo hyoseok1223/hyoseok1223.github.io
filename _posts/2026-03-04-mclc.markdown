@@ -2,7 +2,7 @@
 layout: post
 title:  "Measurement-Consistent Langevin Corrector for Stabilizing Latent Diffusion Inverse Problem Solvers"
 # date:   # 2024-08-16 #22:21:59 +00:00s
-image: /images/mclc.png
+image: /images/mclc_thumbnail.png
 # hover_image: /images/supple_video_ver5_hover.gif
 categories: research
 # author: "Leo Keselman"
@@ -10,22 +10,16 @@ authors:
   - name: "<strong>Lee Hyoseok</strong>"
     link: "https://hyoseok1223.github.io"
   - name: "Sohwi Lim"
-    # link: "https://sites.google.com/view/kwon-byung--ki/%ED%99%88"
+    link: "https://sohwi-lim.github.io/"
   - name: "Eunju Cha"
     link: "https://sites.google.com/sookmyung.ac.kr/vipl/people/professor"
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "ICML"
+award: "Best Excellence Prize, Electronics Times ICT Paper Awards, 2025"
+note: "Presented (<strong style='color:#8184F8;'>Spotlight</strong>) in Workshop on Foundations of Deep Generative Models: Understanding Memorization, Generalization, and Reasoning, in conjunction with ICML 2026"
 arxiv: https://arxiv.org/abs/2601.04791
 # website: https://byungki-k.github.io/JointDiT/
+code: https://github.com/kaist-ami/MCLC
 ---
-<p>
-  <strong style="
-    color: #c00000;
-    background: linear-gradient(transparent 60%, #fff3a0 60%);
-    padding: 0 4px;
-  ">
-    Best Excellence Prize, Electronics Times ICT Paper Awards, 2025
-  </strong>
-</p>
-MCLC, a plug-and-play module that stabilizes and improves latent diffusion inverse solvers.
+MCLC, a plug-and-play module that stabilizes latent diffusion inverse solvers.

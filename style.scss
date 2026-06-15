@@ -13,7 +13,7 @@
 /* BASE RULES */
 /**************/
 a {
-  color: #893BFF;// #1772d0;
+  color: #8184F8;
   text-decoration: none;
 }
 
@@ -111,3 +111,146 @@ span.highlight {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
 //@import "svg-icons";
+
+/* Section divider */
+.section-divider {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 0.5em 2.5% 0;
+}
+
+/* News items */
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 5px 0;
+}
+
+.news-date {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: #8184F8;
+  min-width: 64px;
+  letter-spacing: 0.3px;
+}
+
+.pub-award {
+  margin: 8px 0 2px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a5c00;
+  line-height: 1.5;
+  border-left: 3px solid #f0b429;
+  background-color: #fffbeb;
+}
+
+.pub-note {
+  margin: 8px 0 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  border-left: 3px solid #8184F8;
+  background-color: #f5f4ff;
+}
+
+.news-text {
+  line-height: 1.55;
+  color: #111;
+}
+
+/* Publication link buttons */
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.pub-btn {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1.5px solid #aaa;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #444 !important;
+  background: transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.pub-btn:hover {
+  border-color: #555;
+  color: #111 !important;
+  text-decoration: none;
+}
+
+/* Venue badge overlaid on publication thumbnail */
+.pub-thumb-wrap {
+  position: relative;
+  display: block;
+}
+
+.venue-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.6px;
+  background-color: #8184F8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  /* Stack bio and photo vertically */
+  .bio-row {
+    display: block;
+  }
+  .bio-text {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  .bio-photo {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .bio-photo img {
+    max-width: 160px;
+  }
+
+  /* Stack publication image and text vertically */
+  .pub-row {
+    display: block;
+  }
+  .pub-img {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+  .pub-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  .pub-text {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}

@@ -15,17 +15,9 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "AAAI"
+award: "Winner of the Qualcomm Innovation Fellowship Korea 2025"
 arxiv: https://arxiv.org/abs/2502.06338
 code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
 website: https://hyoseok1223.github.io/zero-shot-depth-completion/
 ---
-<p>
-  <strong style="
-    color: #c00000;
-    background: linear-gradient(transparent 60%, #fff3a0 60%);
-    padding: 0 4px;
-  ">
-    Winner of the Qualcomm Innovation Fellowship Korea 2025
-  </strong>
-</p>
 Zero-shot depth completion: Align sparse depth measurements with affine-invariant depth diffusion prior at test time.

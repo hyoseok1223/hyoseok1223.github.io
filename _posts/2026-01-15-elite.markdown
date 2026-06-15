@@ -2,7 +2,7 @@
 layout: post
 title:  "ELITE: Efficient Gaussian Head Avatar from a Monocular Video via Learned Initialization and Test-time Generative Adaptation"
 # date:   # 2024-08-16 #22:21:59 +00:00s
-image: /images/elite.png
+image: /images/elite_thumbnail.png
 # hover_image: /images/supple_video_ver5_hover.gif
 categories: research
 # author: "Leo Keselman"
@@ -18,7 +18,10 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "CVPR"
+note: "Presented in Workshop on 2nd 4D Vision Workshop Modeling the Dynamic World with CVPR 2026"
+
 arxiv: https://arxiv.org/abs/2601.10200
 website: https://kim-youwang.github.io/elite
+code: https://github.com/kaist-ami/elite
 ---
 ELITE synthesizes an animatable photorealistic Gaussian head avatar from a casual monocular video by synergistically exploiting 3D data priors and 2D generative priors.

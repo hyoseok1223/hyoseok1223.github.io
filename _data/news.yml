@@ -1,6 +1,6 @@
 - date: "2026-05"
   text: "One paper has been accepted to <b>ICML 2026</b>"
-  link: "https://arxiv.org/abs/2601.04791"   # optional
+  # link: "https://arxiv.org/abs/2601.04791"   # optional
 
 - date: "2026-02"
   text: "Two papers have been accepted to <b>CVPR 2026</b>"
@@ -14,11 +14,11 @@
   link: "https://www.etnews.com/20251216000203"
 
 - date: "2025-11"
-  text: "I have been selected as Winner ($4,000 prize), <b>Qualcomm Innvoation Fellowship Korea</b>, 2025"
+  text: "Our paper has been selected as Winner ($4,000 prize), <b>Qualcomm Innvoation Fellowship Korea</b>, 2025"
   link: "https://www.qualcomm.com/research/university-relations/innovation-fellowship/2025-south-korea"
 
 - date: "2025-06"
-  text: "One paper has benn accepted to <b>ICCV 2025</b>"
+  text: "One paper has benn accepYted to <b>ICCV 2025</b>"
 
 - date: "2024-12"
   text: "One paper has been accepted to <b>AAAI 2025</b>"

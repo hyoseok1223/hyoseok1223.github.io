@@ -2,7 +2,7 @@
 layout: post
 title:  "CLAY: Conditional Visual Similarity Modulation in Vision-Language Embedding Space"
 # date:   # 2024-08-16 #22:21:59 +00:00s
-image: /images/clay_thumbnail2.png
+image: /images/clay_thumbnail.png
 # hover_image: /images/supple_video_ver5_hover.gif
 categories: research
 # author: "Leo Keselman"
@@ -16,8 +16,10 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "CVPR"
+note: "Presented in Workshop on 2nd Human-Inspired Computer Vision, in conjunction with ICCV 2025"
 arxiv: https://arxiv.org/abs/2604.11539
 website: https://sohwi-lim.github.io/CLAY/
+code: https://github.com/kaist-ami/CLAY
 # paper: "pdfs/CVPR2026__Conditioned_Image_Retrieval.pdf"
 ---
 CLAY, an adaptive similarity computation method that reframes the embedding space of pretrained Vision-Language Models (VLMs) as a text-conditional similarity space without additional training.
