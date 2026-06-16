@@ -177,6 +177,9 @@
                     {% unless forloop.last %}, {% endunless %}
                   {% endfor %}
                 </p>
+                {% if post.corresponding %}
+                  <p style="font-size:0.85em; color:#555; margin-top:-0.5em;">{{ post.corresponding }}</p>
+                {% endif %}
               </div>
               <div class="pub-links">
               {% if post.arxiv %}
