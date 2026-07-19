@@ -48,6 +48,11 @@ body {
   color: var(--text);
 }
 
+.bio-text,
+.news-text {
+  color: var(--text) !important;
+}
+
 body {
   margin-top: 54px;
   transition: background-color 0.2s ease, color 0.2s ease;
