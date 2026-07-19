@@ -20,7 +20,7 @@ venue: "ICML"
 award: "Best Excellence Prize, Electronics Times ICT Paper Awards, 2025"
 note: "Presented (<strong style='color:#8184F8;'>Spotlight</strong>) in Workshop on Foundations of Deep Generative Models: Understanding Memorization, Generalization, and Reasoning, in conjunction with ICML 2026"
 arxiv: https://arxiv.org/abs/2601.04791
-# website: https://byungki-k.github.io/JointDiT/
+website: https://hyoseok1223.github.io/mclc/
 code: https://github.com/kaist-ami/MCLC
 ---
 MCLC, a plug-and-play module that stabilizes latent diffusion inverse solvers.

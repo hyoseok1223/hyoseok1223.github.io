@@ -19,13 +19,5 @@ arxiv: https://arxiv.org/abs/2502.06338
 website: https://hyoseok1223.github.io/zero-shot-depth-completion/
 code: https://github.com/postech-ami/Zero-Shot-Depth-Completion
 ---
-<p>
-  <strong style="
-    color: #c00000;
-    background: linear-gradient(transparent 60%, #fff3a0 60%);
-    padding: 0 4px;
-  ">
-    Winner of the Qualcomm Innovation Fellowship Korea 2025
-  </strong>
-</p>
+<p class="pub-award">Winner of the Qualcomm Innovation Fellowship Korea 2025</p>
 Zero-shot depth completion: Align sparse depth measurements with affine-invariant depth diffusion prior at test time.

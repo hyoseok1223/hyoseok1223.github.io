@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -17,6 +17,18 @@
 
   <meta name="author" content="{{ site.name }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
+      } catch (error) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -46,20 +58,51 @@
 
 
 <body>
+  <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+    <span class="theme-toggle__icon" aria-hidden="true"></span>
+    <span class="theme-toggle__label">Light</span>
+  </button>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector(".theme-toggle");
+      const label = toggle.querySelector(".theme-toggle__label");
+
+      const updateToggle = () => {
+        const isDark = document.documentElement.dataset.theme === "dark";
+        toggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+        toggle.setAttribute("aria-pressed", String(isDark));
+        label.textContent = isDark ? "Light" : "Dark";
+      };
+
+      toggle.addEventListener("click", () => {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        try {
+          localStorage.setItem("theme", nextTheme);
+        } catch (error) {
+          // The selected theme still applies for this visit if storage is unavailable.
+        }
+        updateToggle();
+      });
+
+      updateToggle();
+    })();
+  </script>
   <!--  -->
   <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px" class="bio-row">
-            <td style="padding:2.5%;width:70%;vertical-align:middle;color:#111;" class="bio-text">
+            <td style="padding:2.5%;width:70%;vertical-align:middle;" class="bio-text">
               <h1>
                 Lee Hyoseok
               </h1>
-              <p>I 
-                <!-- am a Ph.D. student at the <a href="https://ami.kaist.ac.kr/">Advanced Machine Intelligence Lab</a> in School of Computing at a <a href="https://www.kaist.ac.kr/en/">KAIST</a>, advised by <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>, -->
-                <!-- and  -->
-                received my master's degree in Artificial Intelligence at a <a href="https://postech.ac.kr/eng/">POSTECH</a>, advised by <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
+              <p>
+                I am currently an AI Researcher on the VARCO 3D Team at NC AI (Research Personnel, Alternative Military Service).
+                I received my master's degree in Artificial Intelligence from <a href="https://postech.ac.kr/eng/">POSTECH</a>, advised by <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>, 
+                and my bachelor's degree from Kookmin University, advised by <a href="https://sites.google.com/kookmin.ac.kr/junho">Junho Kim</a>.
               </p>
               <p>
                 I work on research problems in computer graphics, vision, and machine learning.
@@ -178,7 +221,7 @@
                   {% endfor %}
                 </p>
                 {% if post.corresponding %}
-                  <p style="font-size:0.85em; color:#555; margin-top:-0.5em;">{{ post.corresponding }}</p>
+                  <p class="corresponding-note" style="font-size:0.85em; margin-top:-0.5em;">{{ post.corresponding }}</p>
                 {% endif %}
               </div>
               <div class="pub-links">
@@ -380,7 +423,7 @@
               <h2>Academic Services</h2>
 
               <ul style="margin: 0.3em 0 0 1.2em; padding: 0; line-height: 1.6;">
-                <li>Journal Reviewer: TPAMI 2026</li>
+                <li>Journal Reviewer: TPAMI</li>
               </ul>
 
             </td>
@@ -403,4 +446,3 @@
 </body>
 
 </html>
-
