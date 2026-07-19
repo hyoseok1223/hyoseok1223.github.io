@@ -18,7 +18,7 @@ authors:
   - name: "Tae-Hyun Oh"
     link: "https://ami.kaist.ac.kr/members/tae-hyun-oh"
 venue: "CVPR"
-note: "Presented in Workshop on 2nd 4D Vision Workshop Modeling the Dynamic World with CVPR 2026"
+note: "Presented in Workshop on 2nd 4D Vision Workshop Modeling the Dynamic World in conjuction with CVPR 2026"
 
 arxiv: https://arxiv.org/abs/2601.10200
 website: https://kim-youwang.github.io/elite
