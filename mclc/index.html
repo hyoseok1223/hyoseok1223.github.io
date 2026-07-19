@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Measurement-Consistent Langevin Corrector for stabilizing latent diffusion inverse problem solvers.">
+  <title>MCLC: Measurement-Consistent Langevin Corrector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout-adjustments.css">
+</head>
+<body>
+  <main>
+    <section class="hero container">
+      <h1>MCLC: Measurement-Consistent Langevin Corrector for Stabilizing Latent Diffusion Inverse Problem Solvers</h1>
+      <div class="authors">
+        <span>Hyoseok Lee<sup>1</sup></span><span>Sohwi Lim<sup>1</sup></span>
+        <span>Eunju Cha<sup>†2</sup></span><span>Tae-Hyun Oh<sup>†1</sup></span>
+      </div>
+      <p class="affiliations"><sup>1</sup>KAIST &nbsp; <sup>2</sup>Sookmyung Women’s University &nbsp; <sup>†</sup>Co-corresponding authors</p>
+      <p class="venue">ICML 2026</p>
+      <div class="links">
+        <a href="assets/19665_Measurement_Consistent.pdf">📄 Paper</a>
+        <a href="assets/mclc_main_poster.pdf">▣ Poster</a>
+        <a href="https://github.com/kaist-ami/MCLC" target="_blank" rel="noopener noreferrer">⌘ Code</a>
+        <a href="#bibtex">❞ BibTeX</a>
+      </div>
+    </section>
+
+    <section class="container intro-visual">
+      <p class="tldr"><strong>TL;DR:</strong> MCLC stabilizes latent diffusion inverse solvers by reducing the distributional gap in solver-induced dynamics without sacrificing measurement consistency.</p>
+      <div class="hero-visuals">
+        <figure class="paper-figure hero-teaser">
+          <img src="assets/figures/teaser.png" alt="Reconstruction results without and with MCLC" width="2600" height="1047">
+          <figcaption>MCLC suppresses solver artifacts and produces cleaner, more reliable reconstructions.</figcaption>
+        </figure>
+        <div class="visual-connector" aria-hidden="true">
+          <span>stabilized by</span>
+          <i>→</i>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/mclc-hero-figure.svg" alt="MCLC corrects solver-induced dynamics toward a measurement-consistent path" width="620" height="620">
+          <figcaption>Correct the dynamics while preserving the measurement.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Abstract</h2>
+      <div class="prose">
+        <p>While latent diffusion models (LDMs) have emerged as powerful priors for inverse problems, existing LDM-based solvers frequently suffer from instability. We identify the instability as a discrepancy between solver dynamics and stable reverse diffusion dynamics learned by the diffusion model, and show that reducing this gap stabilizes the solver.</p>
+        <p>We introduce <strong>Measurement-Consistent Langevin Corrector (MCLC)</strong>, a theoretically grounded plug-and-play stabilization module that remedies LDM-based inverse problem solvers through measurement-consistent Langevin updates. Unlike prior approaches relying on linear manifold assumptions, MCLC provides a principled stabilization mechanism for latent space.</p>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Method Overview</h2>
+      <figure class="paper-figure method-main">
+        <img src="assets/figures/method.png" alt="Illustration of the MCLC projected Langevin update" width="1873" height="596" loading="lazy">
+      </figure>
+      <div class="prose">
+        <p>After the measurement-consistency step, MCLC applies a Langevin correction in the subspace orthogonal to the measurement gradient. The correction moves deviated solver dynamics toward the diffusion model’s time-marginal distribution while preserving measurement consistency up to a controlled bound.</p>
+      </div>
+      <div class="two-column">
+        <figure class="paper-figure compact">
+          <img src="assets/figures/kl-gap.png" alt="KL divergence with and without MCLC" width="1440" height="910" loading="lazy">
+          <figcaption>MCLC narrows the KL gap between solver-induced dynamics and the learned time-marginal distribution.</figcaption>
+        </figure>
+        <div class="key-points">
+          <h3>Why it works</h3>
+          <p><strong>Explicit instability.</strong> We characterize instability as deviation from stable reverse diffusion dynamics.</p>
+          <p><strong>Principled correction.</strong> Langevin dynamics monotonically reduce the distributional discrepancy.</p>
+          <p><strong>Measurement consistency.</strong> Orthogonal projection prevents the corrector from undoing the inverse solver’s measurement update.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wide-container section qualitative" id="qualitative">
+      <h2>Qualitative Results</h2>
+      <p class="section-note">Measurements are fixed on the left. Drag each divider to compare <strong>Base</strong> (left) and <strong>Ours</strong> (right).</p>
+      <div class="qualitative-grid">
+        <article class="task-card">
+          <h3>Random Inpainting</h3>
+          <div class="comparison-row">
+            <figure class="measurement"><span>Measurement</span><img src="assets/qualitative/inpainting-measurement.png" alt="Random inpainting measurement" width="512" height="512" loading="lazy"></figure>
+            <figure class="compare" style="--position:50%"><span class="label base">Base</span><span class="label ours">Ours</span><img class="ours-image" src="assets/qualitative/inpainting-ours.png" alt="MCLC inpainting result" width="512" height="512" loading="lazy"><div class="base-overlay"><img src="assets/qualitative/inpainting-base.png" alt="Base inpainting result" width="512" height="512" loading="lazy"></div><div class="divider"><i>↔</i></div><input type="range" min="0" max="100" value="50" aria-label="Compare base and MCLC for random inpainting"></figure>
+          </div>
+        </article>
+        <article class="task-card">
+          <h3>Super Resolution ×4</h3>
+          <div class="comparison-row">
+            <figure class="measurement"><span>Measurement</span><img src="assets/qualitative/sr-measurement.png" alt="Super-resolution measurement" width="128" height="128" loading="lazy"></figure>
+            <figure class="compare" style="--position:50%"><span class="label base">Base</span><span class="label ours">Ours</span><img class="ours-image" src="assets/qualitative/sr-ours.png" alt="MCLC super-resolution result" width="512" height="512" loading="lazy"><div class="base-overlay"><img src="assets/qualitative/sr-base.png" alt="Base super-resolution result" width="512" height="512" loading="lazy"></div><div class="divider"><i>↔</i></div><input type="range" min="0" max="100" value="50" aria-label="Compare base and MCLC for super resolution"></figure>
+          </div>
+        </article>
+        <article class="task-card">
+          <h3>Motion Deblur</h3>
+          <div class="comparison-row">
+            <figure class="measurement"><span>Measurement</span><img src="assets/qualitative/motion-measurement.png" alt="Motion deblur measurement" width="512" height="512" loading="lazy"></figure>
+            <figure class="compare" style="--position:50%"><span class="label base">Base</span><span class="label ours">Ours</span><img class="ours-image" src="assets/qualitative/motion-ours.png" alt="MCLC motion deblur result" width="512" height="512" loading="lazy"><div class="base-overlay"><img src="assets/qualitative/motion-base.png" alt="Base motion deblur result" width="512" height="512" loading="lazy"></div><div class="divider"><i>↔</i></div><input type="range" min="0" max="100" value="50" aria-label="Compare base and MCLC for motion deblur"></figure>
+          </div>
+        </article>
+        <article class="task-card">
+          <h3>Gaussian Deblur</h3>
+          <div class="comparison-row">
+            <figure class="measurement"><span>Measurement</span><img src="assets/qualitative/gaussian-measurement.png" alt="Gaussian deblur measurement" width="512" height="512" loading="lazy"></figure>
+            <figure class="compare" style="--position:50%"><span class="label base">Base</span><span class="label ours">Ours</span><img class="ours-image" src="assets/qualitative/gaussian-ours.png" alt="MCLC Gaussian deblur result" width="512" height="512" loading="lazy"><div class="base-overlay"><img src="assets/qualitative/gaussian-base.png" alt="Base Gaussian deblur result" width="411" height="500" loading="lazy"></div><div class="divider"><i>↔</i></div><input type="range" min="0" max="100" value="50" aria-label="Compare base and MCLC for Gaussian deblur"></figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Quantitative Results</h2>
+      <p class="section-note">Results on FFHQ using ReSample as the base solver. MCLC particularly improves perceptual quality and reduces regional artifacts.</p>
+      <div class="table-scroll"><table><thead><tr><th>Task</th><th>Method</th><th>PSNR ↑</th><th>LPIPS ↓</th><th>FID ↓</th><th>P-FID ↓</th></tr></thead><tbody>
+        <tr><td rowspan="2">Gaussian Deblur</td><td>Base</td><td>26.44</td><td>0.368</td><td><strong>75.17</strong></td><td>148.11</td></tr><tr class="ours-row"><td>Ours</td><td><strong>27.25</strong></td><td><strong>0.353</strong></td><td>78.38</td><td><strong>106.16</strong></td></tr>
+        <tr><td rowspan="2">Motion Deblur</td><td>Base</td><td>22.45</td><td>0.635</td><td>108.14</td><td>174.52</td></tr><tr class="ours-row"><td>Ours</td><td><strong>24.24</strong></td><td><strong>0.588</strong></td><td><strong>102.02</strong></td><td><strong>118.87</strong></td></tr>
+        <tr><td rowspan="2">Super Resolution</td><td>Base</td><td>26.40</td><td>0.347</td><td>70.16</td><td>133.15</td></tr><tr class="ours-row"><td>Ours</td><td><strong>28.32</strong></td><td><strong>0.236</strong></td><td><strong>53.85</strong></td><td><strong>78.08</strong></td></tr>
+        <tr><td rowspan="2">Random Inpainting</td><td>Base</td><td>27.27</td><td>0.374</td><td>103.17</td><td>133.80</td></tr><tr class="ours-row"><td>Ours</td><td><strong>29.35</strong></td><td><strong>0.235</strong></td><td><strong>75.65</strong></td><td><strong>108.27</strong></td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="container section">
+      <h2>Stabilization Effect</h2>
+      <p class="section-note">Beyond improving average reconstruction quality, MCLC reduces severe solver failures. The PSNR distributions consistently shift toward higher values across inverse problems.</p>
+      <figure class="paper-figure histogram"><img src="assets/figures/psnr-histogram.png" alt="PSNR histograms across inverse problem tasks" width="2600" height="510" loading="lazy"><figcaption>PSNR histograms using ReSample as the base solver. MCLC reduces the low-PSNR tail more effectively than Base and DiffStateGrad.</figcaption></figure>
+    </section>
+
+    <section class="container section" id="bibtex"><h2>BibTeX</h2><div class="bibtex-wrap"><button type="button" data-copy>Copy</button><pre><code>@inproceedings{lee2026mclc,
+  title={Measurement-Consistent Langevin Corrector for Stabilizing Latent Diffusion Inverse Problem Solvers},
+  author={Lee, Hyoseok and Lim, Sohwi and Cha, Eunju and Oh, Tae-Hyun},
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
+  year={2026}
+}</code></pre></div></section>
+  </main>
+  <footer>Measurement-Consistent Langevin Corrector · ICML 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>

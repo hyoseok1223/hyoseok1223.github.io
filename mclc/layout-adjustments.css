@@ -1,0 +1,112 @@
+.intro-visual {
+  width: min(1120px, calc(100% - 40px));
+}
+
+.hero-visuals {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) 56px minmax(300px, 1fr);
+  gap: 8px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.hero-teaser img {
+  border: 1px solid #e3e3e3;
+}
+
+.hero-figure {
+  width: 100%;
+  margin: 0;
+}
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-figure figcaption {
+  text-align: center;
+  color: #6c6c6c;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin-top: 9px;
+}
+
+.visual-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #8a8a8a;
+}
+
+.visual-connector span {
+  font-size: 0.6rem;
+  white-space: nowrap;
+}
+
+.visual-connector i {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7457d9;
+  font-style: normal;
+}
+
+.visual-connector i::before {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #b9acee;
+}
+
+.method-main {
+  width: min(760px, 90%);
+  margin-inline: auto;
+}
+
+.method-main + .prose {
+  width: min(800px, 100%);
+  margin: 24px auto 0;
+}
+
+.two-column {
+  width: min(820px, 100%);
+  margin-inline: auto;
+}
+
+.histogram {
+  margin-top: 30px;
+}
+
+@media (max-width: 760px) {
+  .hero-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-connector {
+    gap: 0;
+  }
+
+  .visual-connector i {
+    width: auto;
+    transform: rotate(90deg);
+  }
+
+  .visual-connector i::before {
+    width: 32px;
+    flex: none;
+  }
+
+  .hero-figure {
+    width: min(360px, 78vw);
+    margin-inline: auto;
+  }
+
+  .method-main,
+  .two-column {
+    width: 100%;
+  }
+}

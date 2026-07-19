@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 620 620">
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8565ff"/><stop offset="1" stop-color="#cdbdff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="circle"><circle cx="310" cy="310" r="310"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle)">
+    <rect width="620" height="620" fill="#17131e"/>
+    <circle cx="310" cy="310" r="260" fill="none" stroke="#fff" stroke-opacity=".08"/>
+    <g fill="none" stroke="url(#field)" stroke-width="2" opacity=".28">
+      <path d="M-30 160 Q150 70 330 160 T690 160"/><path d="M-30 230 Q150 140 330 230 T690 230"/>
+      <path d="M-30 300 Q150 210 330 300 T690 300"/><path d="M-30 370 Q150 280 330 370 T690 370"/>
+      <path d="M-30 440 Q150 350 330 440 T690 440"/>
+    </g>
+    <path d="M78 506 C125 438 91 384 172 355 S206 241 286 296 S340 126 420 194 S505 88 557 64" fill="none" stroke="#ff735f" stroke-width="2" stroke-dasharray="6 8" opacity=".85"/>
+    <path d="M78 506 C132 463 155 424 210 400 S272 347 326 327 S390 268 444 247 S495 193 544 164" fill="none" stroke="#dcd3ff" stroke-width="4" filter="url(#glow)"/>
+    <g fill="#f3efff"><circle cx="78" cy="506" r="7"/><circle cx="210" cy="400" r="6"/><circle cx="326" cy="327" r="6"/><circle cx="444" cy="247" r="6"/><circle cx="544" cy="164" r="8"/></g>
+    <g stroke="#ff735f" stroke-width="2.5" stroke-dasharray="5 5"><path d="M172 355 L210 400"/><path d="M286 296 L326 327"/><path d="M420 194 L444 247"/></g>
+    <text x="310" y="48" fill="#ff735f" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2.2" text-anchor="middle">SOLVER-INDUCED DYNAMICS</text>
+    <text x="310" y="578" fill="#cdbdff" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2.2" text-anchor="middle">MEASUREMENT-CONSISTENT PATH</text>
+    <rect x="259" y="285" width="102" height="38" rx="19" fill="#7057d9"/>
+    <text x="310" y="309" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✦  MCLC</text>
+  </g>
+</svg>
