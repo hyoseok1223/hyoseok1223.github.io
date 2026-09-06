@@ -1,3 +1,7 @@
+- date: "2026-08"
+  text: "Our paper has received Excellence Paper Award ($5,000 prize), <b>Samsung Electronics DS Industry-Academia Collaboration 2026/b>"
+  link: "https://ami.kaist.ac.kr/3b3fdae6-c854-8098-bc52-e847485c234c"
+
 - date: "2026-05"
   text: "One paper has been accepted to <b>ICML 2026</b>"
   # link: "https://arxiv.org/abs/2601.04791"   # optional
@@ -14,7 +18,7 @@
   link: "https://www.etnews.com/20251216000203"
 
 - date: "2025-11"
-  text: "Our paper has been selected as Winner ($4,000 prize), <b>Qualcomm Innvoation Fellowship Korea</b>, 2025"
+  text: "Our paper has been selected as Winner ($4,000 prize), <b>Qualcomm Innvoation Fellowship Korea 2025</b>"
   link: "https://www.qualcomm.com/research/university-relations/innovation-fellowship/2025-south-korea"
 
 - date: "2025-06"
